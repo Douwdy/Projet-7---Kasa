@@ -1,0 +1,23 @@
+footer{
+    position: relative;
+    bottom: 0;
+    height: 210px;
+    background: $color-footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer{
+    &-logo{
+        height: 40px;
+        margin-top: 40px;
+        filter: brightness(100);
+    }
+    &-copyright{
+        margin-top: 29px;
+        font-size: 18px;
+        color: white;
+    }
+}

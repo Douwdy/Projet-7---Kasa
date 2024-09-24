@@ -1,0 +1,26 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 50px;
+    height: 70px;
+}
+
+.header{
+    &-logo{
+        height: 100%;
+    }
+    &-links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 10%;
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
