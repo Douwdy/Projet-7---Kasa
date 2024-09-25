@@ -3,7 +3,6 @@
     width: 90%;
     height: 223px;
     border-radius: 25px;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,5 +17,20 @@
         object-fit: cover;
         border-radius: 25px;
         filter: brightness(0.5);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .banner{
+        height: 110px;
+        border-radius: 10px;
+        h1{
+            font-size: 1.5rem;
+            width: 50%;
+            left: 20px;
+        }
+        img{
+            border-radius: 10px;
+        }
     }
 }

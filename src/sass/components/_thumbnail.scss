@@ -46,3 +46,20 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .logements{
+        &-list{
+            grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+            padding: 0px;
+            background-color: unset;
+        }
+        &-thumbnail{
+            height: 255px;
+            width: 100%;
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
