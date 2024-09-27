@@ -1,0 +1,22 @@
+.tag{
+    &-list{
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    &-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-primary;
+        color: white;
+        height: 25px;
+        width: 115px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

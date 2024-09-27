@@ -1,18 +1,25 @@
 import { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Index from './components/Index';
+import FicheLogement from './components/FicheLogement';
 import './sass/main.scss';
 
 function App() {
   return (
-    <Fragment>
-      <Header/>
-      <main>
-      <Index/>
-      </main>
-      <Footer/>
-    </Fragment>
+    <Router>
+      <Fragment>
+        <Header />
+        <main>
+          <Routes>
+            <Route exact path="/" element={<Index />} />
+            <Route path="/logement/:id" element={<FicheLogement />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Fragment>
+    </Router>
   );
 }
 
