@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 50px;
     img{
         height: 415px;
         width: 90%;
@@ -25,8 +26,50 @@
         font-weight: 500;
         font-size: 18px;
     }
+    &-host{
+        height: 100%;
+        &_name{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row-reverse;
+            margin-bottom: 10px;
+            img{
+                height: 64px;
+                width: 64px;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
+            span{
+                color: $color-primary;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: right;
+            }
+        }
+        &_rating{
+            width: 180px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+        }
+    }
+    &-info{
+        width: 100%;
+    }
+    &-align{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-top: 20px;
+    }
 }
 
 .filled{
     color: $color-primary;
+    &-gray{
+        color: #E3E3E3;
+    }
 }

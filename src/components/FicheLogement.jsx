@@ -13,25 +13,38 @@ const FicheLogement = () => {
 
 return (
     <div className='logement'>
-            <img src={logement.cover} alt={logement.title} />
-            <h1 className='logement-title'>{logement.title}</h1>
-            <p className='logement-loc'>{logement.location}</p>
-            <div className='rating'>
-                {Array.from({ length: 5 }, (_, index) => (
-                    <span key={index} className={index < logement.rating ? 'filled' : ''}>
-                        <i className={index < logement.rating ? 'fas fa-star' : 'far fa-star'}></i>
-                    </span>
-                ))}
-            </div>
-            <div className='tag-list'>
+        <img src={logement.cover} alt={logement.title} />
+    <div className='logement-align'>
+        <div className='logement-info'>
+                <h1 className='logement-title'>{logement.title}</h1>
+                <p className='logement-loc'>{logement.location}</p>
+                <div className='tag-list'>
                     {logement.tags.map((tag, index) => (
-                    <Tag key={index} tag={tag} />
+                        <Tag key={index} tag={tag} />
                     ))}
+                </div>
             </div>
-            <div className='dropdown-align'>
-                <DropdownMenu content={logement.equipments} />
-                <DropdownMenu content={logement.description} />
+            <div className='logement-host'>
+                <div className='logement-host_name'>
+                    <img src={logement.host.picture} alt={logement.host.name} />
+                    <span>
+                        {logement.host.name.split(' ')[0]} <br />
+                        {logement.host.name.split(' ')[1]}
+                    </span>
+                </div>
+                <div className='logement-host_rating'>
+                    {Array.from({ length: 5 }, (_, index) => (
+                        <span key={index} className={index < logement.rating ? 'filled' : 'filled-gray'}>
+                            <i className={index < logement.rating ? 'fas fa-star' : 'fas fa-star'}></i>
+                        </span>
+                    ))}
+                </div>
             </div>
+    </div>
+        <div className='dropdown-align'>
+            <DropdownMenu content={logement.equipments} />
+            <DropdownMenu content={logement.description} />
+        </div>
     </div>
 );
 };
