@@ -12,7 +12,7 @@ const DropdownMenu = ({ content, name, renderItem }) => {
         <div className="dropdown">
             <button onClick={toggleDropdown} className="dropdown-toggle">
                 {name}
-                <i className={`fas fa-angle-${isOpen ? 'up' : 'down'}`}></i>
+                <i className={`fas fa-angle-${isOpen ? 'down' : 'up'}`}></i>
             </button>
             {isOpen && (
                 <ul className="dropdown-menu">

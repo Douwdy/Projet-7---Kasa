@@ -1,6 +1,9 @@
-.logements{
+.logements {
+    display: flex;
+    justify-content: center;
     width: 90%;
-    &-list{
+    
+    &-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
         grid-gap: 20px;
@@ -11,7 +14,8 @@
         background: $color-secondary;
         border-radius: 25px;
     }
-    &-thumbnail{
+    
+    &-thumbnail {
         position: relative;
         display: flex;
         align-items: center;
@@ -21,13 +25,15 @@
         width: 340px;
         border-radius: 10px;
         background-color: $color-primary;
-        img{
+        
+        img {
             width: 100%;
             height: 100%;
             border-radius: 10px;
             object-fit: cover;
         }
-        h2{
+        
+        h2 {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -36,7 +42,8 @@
             margin: 0;
             padding: 10px;
         }
-        &_fade{
+        
+        &_fade {
             position: absolute;
             bottom: 0;
             width: 100%;
@@ -47,17 +54,19 @@
     }
 }
 
-@media screen and (max-width: 768px){
-    .logements{
-        &-list{
+@media screen and (max-width: 768px) {
+    .logements {
+        &-list {
             grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
             padding: 0px;
             background-color: unset;
         }
-        &-thumbnail{
+        
+        &-thumbnail {
             height: 255px;
             width: 100%;
-            h2{
+            
+            h2 {
                 font-size: 1rem;
             }
         }
