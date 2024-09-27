@@ -42,8 +42,16 @@ return (
             </div>
     </div>
         <div className='dropdown-align'>
-            <DropdownMenu content={logement.equipments} />
-            <DropdownMenu content={logement.description} />
+            <DropdownMenu 
+            content={logement.description.split('.')} 
+            name="Description" 
+            renderItem={(item) => <span>{item}</span>} 
+            />
+            <DropdownMenu 
+            content={logement.equipments} 
+            name="Équipments" 
+            renderItem={(item) => <span>{item}</span>} 
+            />
         </div>
     </div>
 );
