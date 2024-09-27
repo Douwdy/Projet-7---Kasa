@@ -1,0 +1,26 @@
+.apropos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 223px;
+        width: 90%;
+        object-fit: cover;
+        border-radius: 25px;
+        filter: brightness(50%);
+    }
+    &-menu{
+        margin: 35px 0px;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column;
+        .dropdown{
+            width: 80%;
+        }
+    }
+}
