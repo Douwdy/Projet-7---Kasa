@@ -24,7 +24,7 @@ const DropdownMenu = ({ content, name, renderItem }) => {
     };
 
     return (
-        <div className={`dropdown ${isOpen ? 'unshrink' : 'shrink'}`}>
+        <div className={`dropdown ${isOpen ? 'unshrink' : prevIsOpen ? 'shrink': '' }`}>
             <button onClick={toggleDropdown} className="dropdown-toggle">
                 {/* Afficher la prop name */}
                 {name}

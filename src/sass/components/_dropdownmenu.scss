@@ -1,6 +1,7 @@
 .dropdown{
     width: 48%;
     overflow: hidden;
+    height: 52px;
     &-align{
         display: flex;
         justify-content: space-between;
@@ -87,7 +88,7 @@
 @keyframes slideDown {
     0%{
         transform: translateY(-100%);
-        visibility: visible;
+        visibility: hidden;
     }
     100%{
         transform: translateY(0%);
@@ -102,7 +103,7 @@
     }
     100%{
         transform: translateY(-100%);
-        visibility: visible;
+        visibility: hidden;
     }
 }
 
