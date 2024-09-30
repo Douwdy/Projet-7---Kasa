@@ -12,15 +12,17 @@ const Carousel = ({ images }) => {
     };
 
     return (
-        <div className="carousel">
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carousel-image" />
-            <button onClick={prevSlide} className="carousel-button carousel-button-left">
-                <i className="fas fa-angle-left"></i>
-            </button>
-            <button onClick={nextSlide} className="carousel-button carousel-button-right">
-                <i className="fas fa-angle-right"></i>
-            </button>
-        </div>
+        <section className="carousel-container">
+            <div className="carousel">
+                <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="carousel-image" />
+                <button onClick={prevSlide} className="carousel-button carousel-button-left">
+                    <i className="fas fa-angle-left"></i>
+                </button>
+                <button onClick={nextSlide} className="carousel-button carousel-button-right">
+                    <i className="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </section>
     );
 };
 

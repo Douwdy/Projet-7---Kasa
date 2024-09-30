@@ -5,12 +5,6 @@
     flex-direction: column;
     width: 100%;
     padding-bottom: 50px;
-    img{
-        height: 415px;
-        width: 90%;
-        object-fit: cover;
-        border-radius: 25px;
-    }
     &-title{
         width: 90%;
         color: $color-primary;
@@ -76,10 +70,6 @@
 
 @media screen and (max-width: 768px){
     .logement{
-        img{
-            height: 255px;
-            border-radius: 10px;
-        }
         &-title{
             font-size: 24px;
             margin: 0px 0px 10px 0px;
