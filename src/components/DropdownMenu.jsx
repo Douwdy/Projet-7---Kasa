@@ -31,7 +31,7 @@ const DropdownMenu = ({ content, name, renderItem }) => {
                 {/* Afficher l'icône avec des classes conditionnelles */}
                 <i className={`fas fa-angle-up ${isOpen ? 'open' : prevIsOpen ? 'close' : ''}`}></i>
             </button>
-                <ul className={`dropdown-menu ${isOpen ? 'slidedown' : 'slideup'}`}>
+                <ul className={`dropdown-menu ${isOpen ? 'slidedown' : prevIsOpen ? 'slideup' :'' }`}>
                     {content.map((item, index) => (
                         // Rendre chaque élément du tableau content en utilisant la fonction renderItem
                         <li key={index}>{renderItem(item)}</li>

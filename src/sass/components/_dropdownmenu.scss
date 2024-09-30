@@ -30,6 +30,7 @@
     }
     &-menu{
         list-style: none;
+        visibility: hidden;
         background-color: $color-secondary;
         margin-top: -5px;
         padding: 15px 25px;
@@ -86,18 +87,22 @@
 @keyframes slideDown {
     0%{
         transform: translateY(-100%);
+        visibility: visible;
     }
     100%{
         transform: translateY(0%);
+        visibility: visible;
     }
 }
 
 @keyframes slideUp {
     0%{
         transform: translateY(0%);
+        visibility: visible;
     }
     100%{
         transform: translateY(-100%);
+        visibility: visible;
     }
 }
 
