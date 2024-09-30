@@ -20,3 +20,18 @@
         color: black;
     }
 }
+
+@media screen and (max-width: 768px){
+    .not-found{
+        margin: 0px;
+        height: 70vh;
+        h1{
+            font-size: 144px;
+        }
+        p{
+            text-align: center;
+            font-size: 22px;
+        }
+    }
+    
+}
