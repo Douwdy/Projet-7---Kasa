@@ -7,9 +7,13 @@ Le projet Kasa est le septième projet de la formation Intégrateur Web 2024 d'O
 ## Objectifs
 
 - Créer une interface utilisateur dynamique et réactive.
-- Utiliser React pour gérer les composants et l'état de l'application.
-- Intégrer des fonctionnalités de recherche et de filtrage des annonces.
+- Utiliser React pour créer les composants réutilisable.
 - Assurer une navigation fluide et intuitive pour les utilisateurs.
+
+## Messages pour les autres étudiants d'OpenClassrooms
+- Ne copiez pas le code, ça ne vous aidera pas à apprendre le javascript.
+- Vous pouvez vous aider des commentaires dans le code pour comprendre le fonctionnement afin de coder le vôtre.
+- Si vous avez des questions, n'hésitez pas à me contacter ici : [Email](mailto:guillaumelamarque7@gmail.com)
 
 ## Technologies
 
@@ -17,12 +21,8 @@ Le projet Kasa est le septième projet de la formation Intégrateur Web 2024 d'O
 - JavaScript
 - HTML/CSS
 
-## Installation
-
-1. Clonez le dépôt.
-2. Installez les dépendances avec `npm install`.
-3. Lancez l'application avec `npm start`.
-
 ## Auteur
+- **Douwd** - [Profil GitHub](https://github.com/Douwdy)
 
-Guillaume Lamarque
+## Remerciements
+Merci à OpenClassrooms pour cette opportunité de formation.
