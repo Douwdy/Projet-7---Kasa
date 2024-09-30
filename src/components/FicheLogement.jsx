@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'; // Importe useParams de react-router-dom pour accéder aux paramètres de l'URL
 import logementsData from '../logements.json'; // Importe les données des logements depuis un fichier JSON
-import Carousel from './Carousel';
+import Gallery from './Gallery';
 import Tag from './Tag'; // Importe le composant Tag
 import DropdownMenu from './DropdownMenu'; // Importe le composant DropdownMenu
 
@@ -14,7 +14,7 @@ const FicheLogement = () => {
 
     return (
         <div className='logement'>
-            <Carousel images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
+            <Gallery images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
             <div className='logement-align'>
                 <div className='logement-info'>
                     <h1 className='logement-title'>{logement.title}</h1> {/* Affiche le titre du logement */}

@@ -25,11 +25,11 @@ const DropdownMenu = ({ content, name, renderItem }) => {
 
     return (
         <div className={`dropdown ${isOpen ? 'unshrink' : prevIsOpen ? 'shrink': '' }`}>
-            <button onClick={toggleDropdown} className="dropdown-toggle">
+            <button className="dropdown-toggle">
                 {/* Afficher la prop name */}
                 {name}
                 {/* Afficher l'icône avec des classes conditionnelles */}
-                <i className={`fas fa-angle-up ${isOpen ? 'open' : prevIsOpen ? 'close' : ''}`}></i>
+                <i onClick={toggleDropdown} className={`fas fa-angle-up ${isOpen ? 'open' : prevIsOpen ? 'close' : ''}`}></i>
             </button>
                 <ul className={`dropdown-menu ${isOpen ? 'slidedown' : prevIsOpen ? 'slideup' :'' }`}>
                     {content.map((item, index) => (
