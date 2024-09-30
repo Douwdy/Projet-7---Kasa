@@ -38,9 +38,6 @@
             font-size: 18px;
             font-weight: 400;
         }
-        ul{
-            
-        }
     }
 }
 
@@ -119,5 +116,27 @@
     }
     100%{
         height: fit-content;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .dropdown{
+        width: 100%;
+        &-align{
+            flex-direction: column;
+        }
+        &-toggle{
+            height: 30px;
+            font-size: 14px;
+            i{
+                font-size: 1.6em;
+            }
+        }
+        &-menu{
+            padding: 10px 20px;
+            li{
+                font-size: 14px;
+            }
+        }
     }
 }

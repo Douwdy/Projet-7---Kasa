@@ -1,0 +1,60 @@
+.carousel{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &-image{
+        height: 415px;
+        object-fit: cover;
+    }
+    &-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        color: white;
+        background-color: blue;
+        &-left{
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        &-right{
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .carousel{
+        &-button{
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            background: none;
+            color: white;
+            background-color: blue;
+            &-left{
+                left: 20px;
+                transform: translateY(-50%);
+            }
+            &-right{
+                right: 20px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    
+}
