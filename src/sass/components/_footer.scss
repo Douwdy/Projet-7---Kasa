@@ -1,21 +1,20 @@
-footer{
-    position: relative;
-    bottom: 0;
+footer {
     height: 210px;
     background: $color-footer;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: auto;
 }
 
-.footer{
-    &-logo{
+.footer {
+    &-logo {
         height: 40px;
         margin-top: 40px;
         filter: brightness(100);
     }
-    &-copyright{
+    &-copyright {
         margin-top: 29px;
         font-size: 18px;
         color: white;

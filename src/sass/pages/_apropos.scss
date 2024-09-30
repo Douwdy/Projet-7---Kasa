@@ -24,3 +24,19 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    .apropos{
+        img{
+            height: 110px;
+            border-radius: 10px;
+        }
+        &-menu{
+            gap: 10px;
+            margin: 20px 0px;
+            .dropdown{
+                width: 100%;
+            }
+        }
+    }
+}
