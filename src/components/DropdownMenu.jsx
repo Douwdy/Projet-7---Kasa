@@ -24,21 +24,19 @@ const DropdownMenu = ({ content, name, renderItem }) => {
     };
 
     return (
-        <div className="dropdown">
+        <div className={`dropdown ${isOpen ? 'unshrink' : 'shrink'}`}>
             <button onClick={toggleDropdown} className="dropdown-toggle">
                 {/* Afficher la prop name */}
                 {name}
                 {/* Afficher l'icône avec des classes conditionnelles */}
                 <i className={`fas fa-angle-up ${isOpen ? 'open' : prevIsOpen ? 'close' : ''}`}></i>
             </button>
-            {isOpen && (
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${isOpen ? 'slidedown' : 'slideup'}`}>
                     {content.map((item, index) => (
                         // Rendre chaque élément du tableau content en utilisant la fonction renderItem
                         <li key={index}>{renderItem(item)}</li>
                     ))}
                 </ul>
-            )}
         </div>
     );
 };

@@ -1,5 +1,6 @@
 .dropdown{
     width: 48%;
+    overflow: hidden;
     &-align{
         display: flex;
         justify-content: space-between;
@@ -44,19 +45,27 @@
 }
 
 .open{
-    animation: open 0.5s forwards;
+    animation: open 0.3s linear forwards;
 }
 
 .close{
-    animation: close 0.5s forwards;
+    animation: close 0.3s linear forwards;
 }
 
-.slideDown{
-    animation: slideDown 0.5s forwards;
+.slidedown{
+    animation: slideDown 0.3s linear forwards;
 }
 
-.slideUp{
-    animation: slideUp 0.5s forwards;
+.slideup{
+    animation: slideUp 0.3s linear forwards;
+}
+
+.shrink{
+    animation: shrink 0.3s linear forwards;
+}
+
+.unshrink{
+    animation: unshrink 0.3s linear forwards;
 }
 
 @keyframes open {
@@ -92,5 +101,23 @@
     }
     100%{
         transform: translateY(-100%);
+    }
+}
+
+@keyframes shrink {
+    0%{
+        height: fit-content;
+    }
+    100%{
+        height: 52px;
+    }
+}
+
+@keyframes unshrink {
+    0%{
+        height: 52px;
+    }
+    100%{
+        height: fit-content;
     }
 }
