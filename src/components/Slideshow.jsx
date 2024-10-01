@@ -1,38 +1,45 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
+// Composant Slideshow qui prend une liste d'images en prop
 const Slideshow = ({ images }) => {
+    // État pour l'index de l'image actuelle
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState(''); // New state for direction
-    const [key, setKey] = useState(0); // New state to force re-render
+    // État pour la direction de l'animation (suivant ou précédent)
+    const [direction, setDirection] = useState(''); 
+    // État pour forcer le re-rendu du composant
+    const [key, setKey] = useState(0); 
 
+    // Fonction pour passer à la diapositive suivante
     const nextSlide = () => {
-        setDirection('next');
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setKey((prevKey) => prevKey + 1); // Force re-render
+        setDirection('next'); // Définir la direction à 'next'
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Mettre à jour l'index de l'image
+        setKey((prevKey) => prevKey + 1); // Forcer le re-rendu
     };
 
+    // Fonction pour revenir à la diapositive précédente
     const prevSlide = () => {
-        setDirection('prev');
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-        setKey((prevKey) => prevKey + 1); // Force re-render
+        setDirection('prev'); // Définir la direction à 'prev'
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Mettre à jour l'index de l'image
+        setKey((prevKey) => prevKey + 1); // Forcer le re-rendu
     };
 
+    // Effet pour réinitialiser la direction après l'animation
     useEffect(() => {
         const timer = setTimeout(() => {
-            setDirection(''); // Reset direction after animation
-        }, 500); // Match the duration of the animation
+            setDirection(''); // Réinitialiser la direction
+        }, 500); // Durée de l'animation
 
-        return () => clearTimeout(timer);
+        return () => clearTimeout(timer); // Clear le timer
     }, [key]);
 
     return (
         <section className="carousel-container">
             <div className="carousel">
                 <img 
-                    key={key} // Force re-render by changing key
+                    key={key} // Forcer le re-rendu en changeant la clé
                     src={images[currentIndex]} 
                     alt={`Slide ${currentIndex}`} 
-                    className={`carousel-image ${direction}`} // Apply direction class
+                    className={`carousel-image ${direction}`} // Appliquer la classe de direction
                 />
                 {images.length > 1 && (
                     <Fragment>
