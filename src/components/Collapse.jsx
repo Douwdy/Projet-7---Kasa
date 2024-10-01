@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 // Importer le CSS de FontAwesome pour les icônes
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Définir le composant DropdownMenu
-const DropdownMenu = ({ content, name, renderItem }) => {
+// Définir le composant Collapse
+const Collapse = ({ content, name, renderItem }) => {
     // État pour suivre si le menu déroulant est ouvert ou fermé
     const [isOpen, setIsOpen] = useState(false);
     // Référence pour stocker l'état précédent de isOpen
@@ -41,5 +41,5 @@ const DropdownMenu = ({ content, name, renderItem }) => {
     );
 };
 
-// Exporter le composant DropdownMenu comme exportation par défaut
-export default DropdownMenu;
+// Exporter le composant Collapse comme exportation par défaut
+export default Collapse;

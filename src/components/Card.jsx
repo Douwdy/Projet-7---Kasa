@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 // Composant Logements qui reçoit les données des logements en tant que prop
-const Logements = ({ logementsData }) => {
+const Card = ({ logementsData }) => {
   // Hook useNavigate pour la navigation programmatique
   const navigate = useNavigate();
 
@@ -13,16 +13,16 @@ const Logements = ({ logementsData }) => {
 
   return (
     // Conteneur pour la liste des logements
-    <div className='logements-list'>
+    <div className='card-list'>
       {/* Itère sur les données des logements et crée un élément pour chaque logement */}
       {logementsData.map((logement) => (
         // Élément de vignette pour chaque logement
         <div
           key={logement.id}
-          className='logements-thumbnail'
+          className='card-thumbnail'
           onClick={() => handleClick(logement.id)} // Ajoute un gestionnaire de clic pour naviguer vers le logement
         >
-          <div className="logements-thumbnail_fade"></div>
+          <div className='card-thumbnail_fade'></div>
           {/* Image de couverture du logement */}
           <img src={logement.cover} alt={logement.title} />
           {/* Titre du logement */}
@@ -34,4 +34,4 @@ const Logements = ({ logementsData }) => {
 };
 
 // Exporte le composant Logements pour l'utiliser dans d'autres parties de l'application
-export default Logements;
+export default Card;

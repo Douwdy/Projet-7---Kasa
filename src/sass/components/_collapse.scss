@@ -67,64 +67,6 @@
     animation: unshrink 0.3s linear forwards;
 }
 
-@keyframes open {
-    0%{
-        transform: rotateZ(0deg);
-    }
-    100%{
-        transform: rotateZ(180deg);
-    }
-}
-
-@keyframes close {
-    0%{
-        transform: rotateZ(180deg);
-    }
-    100%{
-        transform: rotateZ(0deg);
-    }
-}
-
-@keyframes slideDown {
-    0%{
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
-    100%{
-        transform: translateY(0%);
-        visibility: visible;
-    }
-}
-
-@keyframes slideUp {
-    0%{
-        transform: translateY(0%);
-        visibility: visible;
-    }
-    100%{
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
-}
-
-@keyframes shrink {
-    0%{
-        height: fit-content;
-    }
-    100%{
-        height: 52px;
-    }
-}
-
-@keyframes unshrink {
-    0%{
-        height: 52px;
-    }
-    100%{
-        height: fit-content;
-    }
-}
-
 @media screen and (max-width: 768px){
     .dropdown{
         width: 100%;

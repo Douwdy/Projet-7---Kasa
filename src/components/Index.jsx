@@ -1,5 +1,5 @@
 // Importation des composants nécessaires et des données
-import Logements from './Thumbnail'; // Composant pour afficher les logements
+import Card from './Card'; // Composant pour afficher les logements
 import logementsData from '../logements.json'; // Données des logements
 import illustration from '../assets/paysage1.webp'; // Image d'illustration pour la bannière
 import { Fragment } from 'react'; // Importation de Fragment pour encapsuler les éléments sans ajouter de nœud supplémentaire au DOM
@@ -14,8 +14,8 @@ const Index = () => {
                 <img src={illustration} alt='paysage' className='banner-illustration'/> {/* Image de la bannière */}
             </div>
             {/* Section des logements */}
-            <section className='logements'>
-                <Logements logementsData={logementsData}/> {/* Composant Logements avec les données des logements passées en props */}
+            <section className='card'>
+                <Card logementsData={logementsData}/> {/* Composant Logements avec les données des logements passées en props */}
             </section>
         </Fragment>
     );

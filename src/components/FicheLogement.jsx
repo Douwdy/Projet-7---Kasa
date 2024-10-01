@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'; // Importe useParams de react-router-dom pour accéder aux paramètres de l'URL
 import logementsData from '../logements.json'; // Importe les données des logements depuis un fichier JSON
-import Gallery from './Gallery';
+import Slideshow from './Slideshow';
 import Tag from './Tag'; // Importe le composant Tag
-import DropdownMenu from './DropdownMenu'; // Importe le composant DropdownMenu
+import Collapse from './Collapse'; // Importe le composant Collapse
 
 const FicheLogement = () => {
     const { id } = useParams(); // Récupère le paramètre id de l'URL
@@ -14,7 +14,7 @@ const FicheLogement = () => {
 
     return (
         <div className='logement'>
-            <Gallery images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
+            <Slideshow images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
             <div className='logement-align'>
                 <div className='logement-info'>
                     <h1 className='logement-title'>{logement.title}</h1> {/* Affiche le titre du logement */}
@@ -43,16 +43,16 @@ const FicheLogement = () => {
                 </div>
             </div>
             <div className='dropdown-align'>
-                <DropdownMenu 
+                <Collapse 
                     content={logement.description.split('.')} 
                     name="Description" 
                     renderItem={(item) => <span>{item}</span>} 
-                /> {/* Affiche la description en utilisant le composant DropdownMenu */}
-                <DropdownMenu 
+                /> {/* Affiche la description en utilisant le composant Collapse */}
+                <Collapse 
                     content={logement.equipments} 
                     name="Équipements" 
                     renderItem={(item) => <span>{item}</span>} 
-                /> {/* Affiche les équipements en utilisant le composant DropdownMenu */}
+                /> {/* Affiche les équipements en utilisant le composant Collapse */}
             </div>
         </div>
     );

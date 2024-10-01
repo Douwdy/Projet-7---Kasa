@@ -52,6 +52,14 @@
     }
 }
 
+.carousel-image.next {
+    animation: slideNext 0.5s forwards;
+}
+
+.carousel-image.prev {
+    animation: slidePrev 0.5s forwards;
+}
+
 @media screen and (max-width: 768px){
     .carousel{
         &-image{
