@@ -44,27 +44,27 @@
 }
 
 .open{
-    animation: open 0.3s linear forwards;
+    animation: open 0.3s ease forwards;
 }
 
 .close{
-    animation: close 0.3s linear forwards;
+    animation: close 0.3s ease forwards;
 }
 
 .slidedown{
-    animation: slideDown 0.3s linear forwards;
+    animation: slideDown 0.3s ease forwards;
 }
 
 .slideup{
-    animation: slideUp 0.3s linear forwards;
+    animation: slideUp 0.3s ease forwards;
 }
 
 .shrink{
-    animation: shrink 0.3s linear forwards;
+    animation: shrink 0.3s ease forwards;
 }
 
 .unshrink{
-    animation: unshrink 0.3s linear forwards;
+    animation: unshrink 0.3s ease forwards;
 }
 
 @media screen and (max-width: 768px){
