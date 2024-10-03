@@ -1,6 +1,6 @@
 // Importation des composants nécessaires depuis 'react-router-dom'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // Importation des composants de l'application
 import Index from './components/Index';
@@ -24,7 +24,7 @@ const LogementRoute = () => {
     // Récupération de l'ID du logement depuis les paramètres de l'URL
     const { id } = useParams();
     // Redirection vers la page NotFound si l'ID n'existe pas
-    return checkLogementExists(id) ? <FicheLogement /> : <Navigate to="/not-found" />;
+    return checkLogementExists(id) ? <FicheLogement /> : <NotFound />;
 };
 
 // Configuration du routeur de l'application

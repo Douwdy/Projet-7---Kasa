@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 
 // Composant Slideshow qui prend une liste d'images en prop
 const Slideshow = ({ images }) => {
@@ -42,7 +42,7 @@ const Slideshow = ({ images }) => {
                     className={`carousel-image ${direction}`} // Appliquer la classe de direction
                 />
                 {images.length > 1 && (
-                    <Fragment>
+                    <>
                         <p className="carousel-caption">{currentIndex + 1}/{images.length}</p>
                         <button onClick={prevSlide} className="carousel-button carousel-button-left">
                             <i className="fas fa-angle-left"></i>
@@ -50,7 +50,7 @@ const Slideshow = ({ images }) => {
                         <button onClick={nextSlide} className="carousel-button carousel-button-right">
                             <i className="fas fa-angle-right"></i>
                         </button>
-                    </Fragment>
+                    </>
                 )}
             </div>
         </section>

@@ -7,11 +7,7 @@ import Collapse from './Collapse'; // Importe le composant Collapse
 const FicheLogement = () => {
     const { id } = useParams(); // Récupère le paramètre id de l'URL
     const logement = logementsData.find((logement) => logement.id === id); // Trouve le logement avec l'id correspondant
-
-    if (!logement) {
-        return <div>Logement non trouvé</div>; // Affiche un message si le logement n'est pas trouvé
-    }
-
+    
     return (
         <div className='logement'>
             <Slideshow images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
