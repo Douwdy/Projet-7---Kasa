@@ -1,10 +1,6 @@
-// Importer les hooks nécessaires de React
-import React, { useState, useEffect, useRef } from 'react';
-// Importer le CSS de FontAwesome pour les icônes
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { useState, useRef, useEffect } from 'react';
 
-// Définir le composant Collapse
-const Collapse = ({ content, name, renderItem }) => {
+const Collapse = ({ name, children }) => {
     // État pour suivre si le menu déroulant est ouvert ou fermé
     const [isOpen, setIsOpen] = useState(false);
     // Référence pour stocker l'état précédent de isOpen
@@ -24,22 +20,18 @@ const Collapse = ({ content, name, renderItem }) => {
     };
 
     return (
-        <div className={`dropdown ${isOpen ? 'unshrink' : prevIsOpen ? 'shrink': '' }`}>
+        <div className={`dropdown ${isOpen ? 'unshrink' : prevIsOpen ? 'shrink' : ''}`}>
             <button className="dropdown-toggle">
                 {/* Afficher la prop name */}
                 {name}
                 {/* Afficher l'icône avec des classes conditionnelles */}
                 <i onClick={toggleDropdown} className={`fas fa-angle-up ${isOpen ? 'open' : prevIsOpen ? 'close' : ''}`}></i>
             </button>
-                <ul className={`dropdown-menu ${isOpen ? 'slidedown' : prevIsOpen ? 'slideup' :'' }`}>
-                    {content.map((item, index) => (
-                        // Rendre chaque élément du tableau content en utilisant la fonction renderItem
-                        <li key={index}>{renderItem(item)}</li>
-                    ))}
-                </ul>
+            <ul className={`dropdown-menu ${isOpen ? 'slidedown' : prevIsOpen ? 'slideup' : ''}`}>
+                {children}
+            </ul>
         </div>
     );
 };
 
-// Exporter le composant Collapse comme exportation par défaut
 export default Collapse;

@@ -9,32 +9,24 @@ const APropos = () => {
             <Banner illustration={Illustration}/>
             <div className="apropos-menu"> {/* Conteneur pour les menus déroulants */}
                 {/* Menu déroulant pour la fiabilité */}
-                <Collapse 
-                    content={apropos.fiabilite.split()} // Contenu du menu (vide pour l'instant)
-                    name="Fiabilité" // Nom du menu
-                    renderItem={(item) => <span>{item}</span>} // Fonction de rendu des éléments du menu
-                />
+                <Collapse name="Fiabilité">
+                    {apropos.fiabilite.split().map((item, index) => <span key={index}>{item}</span>)}
+                </Collapse>
                 {/* Menu déroulant pour le respect */}
-                <Collapse 
-                    content={apropos.respect.split()} // Contenu du menu (vide pour l'instant)
-                    name="Respect" // Nom du menu
-                    renderItem={(item) => <span>{item}</span>} // Fonction de rendu des éléments du menu
-                />
+                <Collapse name="Respect">
+                    {apropos.respect.split().map((item, index) => <span key={index}>{item}</span>)}
+                </Collapse>
                 {/* Menu déroulant pour le service */}
-                <Collapse 
-                    content={apropos.service.split()} // Contenu du menu (vide pour l'instant)
-                    name="Service" // Nom du menu
-                    renderItem={(item) => <span>{item}</span>} // Fonction de rendu des éléments du menu
-                />
+                <Collapse name="Service">
+                    {apropos.service.split().map((item, index) => <span key={index}>{item}</span>)}
+                </Collapse>
                 {/* Menu déroulant pour la sécurité */}
-                <Collapse 
-                    content={apropos.securite.split()} // Contenu du menu (vide pour l'instant)
-                    name="Sécurité" // Nom du menu
-                    renderItem={(item) => <span>{item}</span>} // Fonction de rendu des éléments du menu
-                />
+                <Collapse name="Sécurité">
+                    {apropos.securite.split().map((item, index) => <span key={index}>{item}</span>)}
+                </Collapse>
             </div>
         </div>
     );
 }
 
-export default APropos; // Exportation du composant APropos
+export default APropos;

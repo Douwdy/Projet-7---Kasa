@@ -39,19 +39,15 @@ const FicheLogement = () => {
                 </div>
             </div>
             <div className='dropdown-align'>
-                <Collapse 
-                    content={logement.description.split('.')} 
-                    name="Description" 
-                    renderItem={(item) => <span>{item}</span>} 
-                /> {/* Affiche la description en utilisant le composant Collapse */}
-                <Collapse 
-                    content={logement.equipments} 
-                    name="Équipements" 
-                    renderItem={(item) => <span>{item}</span>} 
-                /> {/* Affiche les équipements en utilisant le composant Collapse */}
+                <Collapse name="Description">
+                    {logement.description.split('.').map((item, index) => <span key={index}>{item}</span>)}
+                </Collapse> {/* Affiche la description en utilisant le composant Collapse */}
+                <Collapse name="Équipements">
+                    {logement.equipments.map((item, index) => <li key={index}>{item}</li>)}
+                </Collapse> {/* Affiche les équipements en utilisant le composant Collapse */}
             </div>
         </div>
     );
 };
 
-export default FicheLogement;
+export default FicheLogement; // Exporte le composant FicheLogement
