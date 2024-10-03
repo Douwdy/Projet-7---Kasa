@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 
 // Composant Slideshow qui prend une liste d'images en prop
-const Slideshow = ({ images }) => {
+const Slideshow = ({ images, logementName }) => {
     // État pour l'index de l'image actuelle
     const [currentIndex, setCurrentIndex] = useState(0);
     // État pour la direction de l'animation (suivant ou précédent)
@@ -38,7 +38,7 @@ const Slideshow = ({ images }) => {
                 <img 
                     key={key} // Forcer le re-rendu en changeant la clé
                     src={images[currentIndex]} 
-                    alt={`Slide ${currentIndex}`} 
+                    alt={`Slide N°${currentIndex} de ${logementName}`}
                     className={`carousel-image ${direction}`} // Appliquer la classe de direction
                 />
                 {images.length > 1 && (

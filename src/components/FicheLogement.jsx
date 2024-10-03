@@ -10,7 +10,7 @@ const FicheLogement = () => {
     
     return (
         <div className='logement'>
-            <Slideshow images={logement.pictures} /> {/* Affiche les images du logement en utilisant le composant Carousel */}
+            <Slideshow images={logement.pictures} logementName={logement.title}/> {/* Affiche les images du logement en utilisant le composant Carousel */}
             <div className='logement-align'>
                 <div className='logement-info'>
                     <h1 className='logement-title'>{logement.title}</h1> {/* Affiche le titre du logement */}
