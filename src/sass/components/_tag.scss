@@ -1,6 +1,6 @@
 .tag{
     &-list{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -11,6 +11,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         background-color: $color-primary;
         color: white;
         height: 25px;

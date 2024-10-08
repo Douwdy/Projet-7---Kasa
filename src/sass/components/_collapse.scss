@@ -43,6 +43,12 @@
     }
 }
 
+.fa-angle-up{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .open{
     animation: open 0.3s ease forwards;
 }
