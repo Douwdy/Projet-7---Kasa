@@ -11,7 +11,7 @@ Le projet Kasa est le septième projet de la formation Intégrateur Web 2024 d'O
 - Assurer une navigation fluide et intuitive pour les utilisateurs.
 
 ## Messages pour les autres étudiants d'OpenClassrooms
-- Ne copiez pas le code, ça ne vous aidera pas à apprendre le javascript.
+- Ne copiez pas le code, ça ne vous aidera pas à apprendre React.
 - Vous pouvez vous aider des commentaires dans le code pour comprendre le fonctionnement afin de coder le vôtre.
 - Si vous avez des questions, n'hésitez pas à me contacter ici : [Email](mailto:guillaumelamarque7@gmail.com)
 
